@@ -50,23 +50,18 @@ To use it, change the Video Combine format to `video/ProRes` and select the desi
 1. A current **ComfyUI** build with native SeedVR2 support.
 2. **ComfyUI-VideoHelperSuite (VHS)**.
 3. FFmpeg available to ComfyUI/VHS.
-4. The included `ComfyUI-SeedVR2-LongVideo` custom node folder.
+4. This custom-node repository.
 5. SeedVR2 model files:
    - `ComfyUI/models/diffusion_models/seedvr2_3b_int8_convrot.safetensors`
    - `ComfyUI/models/vae/seedvr2_ema_vae_fp16.safetensors`
 
 ## Installation
 
-Copy:
+Clone the repository directly into `ComfyUI/custom_nodes/`:
 
-```text
-ComfyUI-SeedVR2-LongVideo
-```
-
-into:
-
-```text
-ComfyUI/custom_nodes/
+```bash
+cd ComfyUI/custom_nodes
+git clone https://github.com/biogoly/ComfyUI-SeedVR2-LongVideo.git
 ```
 
 Restart ComfyUI, then import:
@@ -74,6 +69,8 @@ Restart ComfyUI, then import:
 ```text
 workflows/SeedVR2_LongVideo_Upscale_v1.4.json
 ```
+
+Alternatively, download the repository ZIP and place the extracted `ComfyUI-SeedVR2-LongVideo` folder under `ComfyUI/custom_nodes/`.
 
 Place a source video anywhere under `ComfyUI/input/`, or use the **choose video to upload** button added to the SeedVR2 Long Video input node.
 
@@ -145,17 +142,19 @@ The workflow is intended primarily for normal constant-frame-rate material. VHS 
 
 A genuinely variable-frame-rate source may therefore be normalized to constant rate. For important long renders, check A/V sync on a short test first.
 
-## Included files
+## Repository layout
 
 ```text
 README.md
+CHANGELOG.md
 CIVITAI_DESCRIPTION.md
+__init__.py
+nodes.py
+web/
+  js/
+    seedvr2_longvideo.js
 workflows/
   SeedVR2_LongVideo_Upscale_v1.4.json
-ComfyUI-SeedVR2-LongVideo/
-  __init__.py
-  nodes.py
-  web/js/seedvr2_longvideo.js
 ```
 
 ## Notes
