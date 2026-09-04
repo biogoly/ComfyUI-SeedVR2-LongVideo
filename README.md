@@ -1,3 +1,6 @@
+<img width="1829" height="860" alt="ef1b0299-a36b-4f70-88d7-c4565e2bccd7" src="https://github.com/user-attachments/assets/272c2665-26fe-4799-a951-713aee37cb24" />
+
+
 # SeedVR2 Long Video Upscaler for ComfyUI
 
 **Automatically upscale HD video to high-resolution / 4K with SeedVR2 without loading the entire video into VRAM.**
