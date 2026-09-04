@@ -147,7 +147,6 @@ A genuinely variable-frame-rate source may therefore be normalized to constant r
 ```text
 README.md
 CHANGELOG.md
-CIVITAI_DESCRIPTION.md
 __init__.py
 nodes.py
 web/
